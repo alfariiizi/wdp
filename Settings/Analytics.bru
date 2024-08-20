@@ -1,0 +1,26 @@
+meta {
+  name: Analytics
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/visual/analytics
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "topic_id": 1,
+    "name": "Data Pupuk",
+    "link": "https://superset.com/dashboard",
+    "description": "Data sebaran pupuk pulau jawa",
+    "is_public": true,
+    "channel": "superset"
+  }
+}

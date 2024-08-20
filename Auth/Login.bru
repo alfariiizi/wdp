@@ -1,0 +1,28 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/auth/login
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/9.3.1
+}
+
+body:json {
+  {
+    "email": "tech@windsight.id",
+    "password": "Sprint@Winter2023"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("ACCESS_TOKEN", res.body.data.access_token);
+  bru.setEnvVar("REFRESH_TOKEN", res.body.data.refresh_token);
+}

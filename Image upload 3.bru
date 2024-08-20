@@ -1,0 +1,26 @@
+meta {
+  name: Image upload 3
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/media/file-upload
+  body: multipartForm
+  auth: none
+}
+
+headers {
+  User-Agent: insomnia/9.3.1
+  ~Content-Type: multipart/form-data
+}
+
+body:json {
+  {
+    "file": "@/Users/tinywow_change_bg_photo_55604422.png"
+  }
+}
+
+body:multipart-form {
+  file: @file(/home/alfarizi/Downloads/DALL·E 2024-05-12 17.44.30 - Logo design for a creative app named 'KreaTeef'. The logo features a deep blue color (#2C4E80) as the primary color. It includes a stylized t-shirt ic-2.webp)
+}

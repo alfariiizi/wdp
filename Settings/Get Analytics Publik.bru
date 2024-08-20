@@ -1,0 +1,15 @@
+meta {
+  name: Get Analytics Publik
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{BASE_URL}}/public/visual/analytics
+  body: none
+  auth: none
+}
+
+params:query {
+  ~topic_id: 1
+}

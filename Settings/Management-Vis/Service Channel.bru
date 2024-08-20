@@ -1,0 +1,22 @@
+meta {
+  name: Service Channel
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/visual/channel-connection
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/9.3.1
+}
+
+body:json {
+  {
+    "channel": "superset"
+  }
+}

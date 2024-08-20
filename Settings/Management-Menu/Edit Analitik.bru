@@ -1,0 +1,32 @@
+meta {
+  name: Edit Analitik
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{BASE_URL}}/visual/analytics?analytics_id=3
+  body: json
+  auth: inherit
+}
+
+params:query {
+  analytics_id: 3
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Data Pupuk",
+    "link": "https://superset.com/dashboard/123",
+    "description": "Data sebaran pupuk pulau jawa",
+    "is_public": true,
+    "is_active": true,
+    "channel": "superset",
+    "topic_id": 1,
+    id: 3
+  }
+}

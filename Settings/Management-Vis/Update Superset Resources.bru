@@ -1,0 +1,25 @@
+meta {
+  name: Update Superset Resources
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{BASE_URL}}/visual/channel-connection
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  User-Agent: insomnia/9.3.1
+}
+
+body:json {
+  {
+    "channel": "superset",
+    "host": "http://103.152.244.72",
+    "username": "admin",
+    "password": "d4t4Samarinda!"
+  }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Image upload
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/media/file-upload
+  body: json
+  auth: none
+}
+
+headers {
+  User-Agent: insomnia/9.3.1
+  ~Content-Type: multipart/form-data
+}
+
+body:json {
+  {
+    "file": "@/Users/tinywow_change_bg_photo_55604422.png"
+  }
+}
+
+body:multipart-form {
+  file: tinywow_change_bg_photo_55604422.png
+}

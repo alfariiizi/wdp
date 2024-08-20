@@ -1,0 +1,16 @@
+meta {
+  name: Superset Analytics
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/visual/channel?channel=superset
+  body: none
+  auth: inherit
+}
+
+params:query {
+  channel: superset
+  ~id: 2
+}
